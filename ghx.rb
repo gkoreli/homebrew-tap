@@ -5,12 +5,12 @@
 class Ghx < Formula
   desc "GitHub code exploration for AI agents"
   homepage "https://github.com/gkoreli/ghx"
-  version "2.1.9"
+  version "2.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.1.9/ghx_darwin_amd64.tar.gz"
-      sha256 "316ed4d6a025c5d495269fe86e7d0dcfaa5a4e72afbf04340925a9c59724c917"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.1.10/ghx_darwin_amd64.tar.gz"
+      sha256 "2a08e2cc82064b33d749af6a8feb42a3d4f9cdc575c855c5c081dbe9104e9bd5"
 
       define_method(:install) do
         bin.install "ghx"
@@ -19,8 +19,8 @@ class Ghx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.1.9/ghx_darwin_arm64.tar.gz"
-      sha256 "743a0dddf5a686b82cf3780ea2cd1fbdcab18d5cb0f42bbc57f1e5d8d35583ce"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.1.10/ghx_darwin_arm64.tar.gz"
+      sha256 "ba7f0ecab516a273710b5a73730938d0672dba315a0df53f8f708e6a33851509"
 
       define_method(:install) do
         bin.install "ghx"
@@ -32,8 +32,8 @@ class Ghx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.1.9/ghx_linux_amd64.tar.gz"
-      sha256 "8442b0bd2fe2453cf0f0e955b09bb1417e7b2beb0e7ff5375f0f370b0eabe929"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.1.10/ghx_linux_amd64.tar.gz"
+      sha256 "107894fc0a1b24d427abeef6341a8d8c9ea95f3cf8acb893b1a64444028d9e5d"
       define_method(:install) do
         bin.install "ghx"
         prefix.install "SKILL.md"
@@ -41,8 +41,8 @@ class Ghx < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.1.9/ghx_linux_arm64.tar.gz"
-      sha256 "38a6123014c296e62fa2ff48b0d802128a1a7a581b6256c6fb9c9d54a20ad73f"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.1.10/ghx_linux_arm64.tar.gz"
+      sha256 "fcacf5f4ca2cd9b010016321a1143c4a1675459e72feb2d1afa187ee07460895"
       define_method(:install) do
         bin.install "ghx"
         prefix.install "SKILL.md"
