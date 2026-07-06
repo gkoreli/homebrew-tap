@@ -5,48 +5,52 @@
 class Ghx < Formula
   desc "GitHub code exploration for AI agents"
   homepage "https://github.com/gkoreli/ghx"
-  version "2.3.1"
+  version "2.3.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.3.1/ghx_darwin_amd64.tar.gz"
-      sha256 "b8ed527ba1537910ec702cca8dc70e1aa6bc14d7761f769ed573235be9fc35d4"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.3.2/ghx_darwin_amd64.tar.gz"
+      sha256 "a5265086571052d721646c88af855cf616e8352c4333c897258d2fb6f2a567dd"
 
       define_method(:install) do
         bin.install "ghx"
-        prefix.install "SKILL.md"
-        prefix.install "MCP-SKILL.md"
+        prefix.install "SKILL-ghx.md"
+        prefix.install "SKILL-ghx-mcp.md"
+        prefix.install "SKILL-ghx-recon.md"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.3.1/ghx_darwin_arm64.tar.gz"
-      sha256 "395b4515ab422a0bb30ebe0741ce2a0c3a1c3f18dc25b9ac5c3ad005841c5ecf"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.3.2/ghx_darwin_arm64.tar.gz"
+      sha256 "c51a2632bb3ef4c599da4e712e809cf78bd2a7a2647d79ecb5b900849035dab8"
 
       define_method(:install) do
         bin.install "ghx"
-        prefix.install "SKILL.md"
-        prefix.install "MCP-SKILL.md"
+        prefix.install "SKILL-ghx.md"
+        prefix.install "SKILL-ghx-mcp.md"
+        prefix.install "SKILL-ghx-recon.md"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.3.1/ghx_linux_amd64.tar.gz"
-      sha256 "39a965c84cb6a6c693e0d0a904384caa04cb1fa2d869c29bb969c18595dd0407"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.3.2/ghx_linux_amd64.tar.gz"
+      sha256 "278b7aa94d6f527ef400c4fc9041cfa42f25243cdb68d4aa9b941bfdaf6dc215"
       define_method(:install) do
         bin.install "ghx"
-        prefix.install "SKILL.md"
-        prefix.install "MCP-SKILL.md"
+        prefix.install "SKILL-ghx.md"
+        prefix.install "SKILL-ghx-mcp.md"
+        prefix.install "SKILL-ghx-recon.md"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gkoreli/ghx/releases/download/v2.3.1/ghx_linux_arm64.tar.gz"
-      sha256 "d0350445cbd9bf831beaefddebc05960cf07037bd161c1efc28b7256689e15e8"
+      url "https://github.com/gkoreli/ghx/releases/download/v2.3.2/ghx_linux_arm64.tar.gz"
+      sha256 "39201a57a7423d0f32e179b3e493e56a0189dd8da33191d3fd33c938db30712f"
       define_method(:install) do
         bin.install "ghx"
-        prefix.install "SKILL.md"
-        prefix.install "MCP-SKILL.md"
+        prefix.install "SKILL-ghx.md"
+        prefix.install "SKILL-ghx-mcp.md"
+        prefix.install "SKILL-ghx-recon.md"
       end
     end
   end
